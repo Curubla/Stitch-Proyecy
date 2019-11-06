@@ -9,6 +9,8 @@ boolean running=false, chain = false, Ff=false, Hgb = false, knot=false, bh=fals
 
 float X, Y;
 
+PImage img;
+
 void setup(){
 
   size(1280,720);
@@ -24,7 +26,6 @@ void setup(){
   loadPixels();
   
   MenuPrincipal();
-  
   
   
   
@@ -369,9 +370,20 @@ void menuChainStitch(){
 
 void Chain(){
  
+  background(255,70,225);
+  
   textSize(80);
   fill(0);
   text("Chain", width/2 - width/4, 80);
+  fill(40,150,200);
+  textSize(30);
+  text("Este bordado en espcial se caracteriza por tener muchas variaciones y muy simples", 1280/19, 140);
+  text("Es usado principalmente para rellenar", 1280/19, 180);
+  
+  img=loadImage("Chain.jpg");
+  
+  image(img, 0, 240);
+  
   
   
   int cont=0;
