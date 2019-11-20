@@ -9,8 +9,6 @@ boolean running=false, chain = false, Ff=false, Hgb = false, knot=false, bh=fals
 
 float X, Y;
 
-PImage img;
-
 void setup(){
 
   size(1280,720);
@@ -26,6 +24,7 @@ void setup(){
   loadPixels();
   
   MenuPrincipal();
+  
   
   
   
@@ -309,14 +308,30 @@ void menuRSF(){
 
 //Pantalla de Running Stitch
 void RunningStitch(){
- /* for(int i =0; i<width*height;i++){
-    pixels[i]=c;
-  }
-  updatePixels();
-  */
+ 
   textSize(80);
   fill(0);
   text("Running Stitch", width/2 - width/4, 80);
+  fill(40,150,200);
+  textSize(30);
+  text("Este bordado en espcial se caracteriza por tener muchas variaciones y muy simples", 1280/19, 140);
+  text("Es usado principalmente para rellenar", 1280/19, 180);
+  
+  for(int i=0;i<width;i++){
+      
+    if(!(i>50 && i<100) && !(i>150 && i<200) && !(i>250 && i<300) && !(i>350 && i<400) && !(i>450 && i<500) && !(i>550 && i<600) && !(i>650 && i<700) && !(i>750 && i<800) && !(i>850 && i<900) && !(i>950 && i<1000) && !(i>1050 && i<1100) && !(i>1150 && i<1200) ){
+    
+      point(i, height/2); 
+    }
+   /* if(!(i==50 && i==100) && !(i>150 && i<200) && !(i>250 && i<300) && !(i>350 && i<400) && !(i>450 && i<500) && !(i>550 && i<600) && !(i>650 && i<700) && !(i>750 && i<800) && !(i>850 && i<900) && !(i>950 && i<1000) && !(i>1050 && i<1100) && !(i>1150 && i<1200) ){
+    
+      ellipse(i, height/2,20,20); 
+    }*/
+    
+    
+    
+      
+    }
 }
 
 
@@ -370,8 +385,6 @@ void menuChainStitch(){
 
 void Chain(){
  
-  background(255,70,225);
-  
   textSize(80);
   fill(0);
   text("Chain", width/2 - width/4, 80);
@@ -379,13 +392,6 @@ void Chain(){
   textSize(30);
   text("Este bordado en espcial se caracteriza por tener muchas variaciones y muy simples", 1280/19, 140);
   text("Es usado principalmente para rellenar", 1280/19, 180);
-  
-  img=loadImage("Chain.jpg");
-  
-  image(img, 0, 240);
-  
-  
-  
   int cont=0;
     
   float RadX=75,RadY=50;
@@ -431,4 +437,9 @@ void InterlacedChain(){
   textSize(80);
   fill(0);
   text("Interlaced chain", width/2 - width/4, 80);
+}
+
+void RunningStitchI(){
+
+    
 }
